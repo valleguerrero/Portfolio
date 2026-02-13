@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Nombre | Impulso Digital para Negocios</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['DM Sans', 'system-ui', 'sans-serif'] },
+                    colors: {
+                        ink: '#0f172a',
+                        mist: '#64748b',
+                        cream: '#fafaf9',
+                        accent: '#0d9488',
+                        accenthover: '#0f766e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .text-balance { text-wrap: balance; }
+    </style>
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+        <div class="max-w-2xl mx-auto">
+            <p class="text-mist text-sm uppercase tracking-[0.2em] mb-6">Impulso digital para negocios</p>
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-balance leading-[1.1] mb-6">
+                Hago que tu negocio <span class="text-accent">venda más</span>.
+            </h1>
+            <p class="text-lg text-mist max-w-xl mx-auto mb-10 leading-relaxed">
+                Diseño y optimización de webs para locales que quieren dejar de ser invisibles en Google.
+            </p>
+            <a href="#servicios" class="inline-block bg-ink text-cream px-8 py-3.5 rounded-full font-medium hover:bg-slate-800 transition-colors duration-200">
+                Ver servicios
+            </a>
+        </div>
+    </header>
+
+    <section id="servicios" class="py-24 md:py-32 border-t border-stone-200/80">
+        <div class="max-w-5xl mx-auto px-6">
+            <p class="text-mist text-sm uppercase tracking-[0.2em] mb-3">Qué ofrezco</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-16">Servicios</h2>
+            <div class="grid md:grid-cols-3 gap-10 md:gap-12">
+                <article class="group">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2 text-ink">Creación de Web</h3>
+                    <p class="text-mist leading-relaxed">
+                        Sitios a medida, rápidos y adaptados a móvil. Desde landing hasta tienda o web corporativa, con foco en conversión y usabilidad.
+                    </p>
+                </article>
+                <article class="group">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2 text-ink">Mejora de Velocidad</h3>
+                    <p class="text-mist leading-relaxed">
+                        Optimización técnica para que tu web cargue en segundos. Mejor experiencia de usuario y mejor posicionamiento en buscadores.
+                    </p>
+                </article>
+                <article class="group">
+                    <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-5 group-hover:bg-accent/15 transition-colors">
+                        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="font-semibold text-xl mb-2 text-ink">SEO Local</h3>
+                    <p class="text-mist leading-relaxed">
+                        Aparecer en búsquedas de tu zona: Google Business, palabras clave locales y contenido que atraiga clientes de la comarca.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="py-24 md:py-32 bg-white/60 border-t border-stone-200/80">
+        <div class="max-w-5xl mx-auto px-6">
+            <p class="text-mist text-sm uppercase tracking-[0.2em] mb-3">Trabajos</p>
+            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-16">Casos de Éxito (Demos)</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <a href="#" class="block bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:border-stone-300 transition-colors group">
+                    <div class="aspect-[4/3] bg-stone-200/60 flex items-center justify-center text-mist group-hover:bg-stone-200/80 transition-colors">Imagen Demo 1</div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2 text-ink">Restaurante Gourmet</h3>
+                        <p class="text-mist text-sm leading-relaxed mb-4">Optimización de carta digital y reservas online.</p>
+                        <span class="text-accent font-medium text-sm">Ver Demo →</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-24 md:py-32 text-center border-t border-stone-200/80">
+        <div class="max-w-xl mx-auto px-6">
+            <h2 class="text-2xl md:text-3xl font-bold tracking-tight mb-3">¿Hablamos de tu próximo cliente?</h2>
+            <p class="text-mist mb-8 leading-relaxed">Envíame un mensaje y analizamos tu web actual gratis.</p>
+            <a href="https://wa.me/TUNUMERO" class="inline-block bg-accent text-white px-8 py-3.5 rounded-full font-medium hover:bg-accenthover transition-colors duration-200">
+                Contactar por WhatsApp
+            </a>
+        </div>
+    </footer>
+
+</body>
+</html>
