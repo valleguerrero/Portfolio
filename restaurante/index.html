@@ -32,6 +32,14 @@
 </head>
 <body class="bg-cream text-ink font-sans antialiased">
 
+    <!-- Navegación -->
+    <nav class="fixed top-4 left-6 z-40">
+        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink/80 backdrop-blur-sm text-white/95 hover:bg-ink hover:text-white text-sm font-medium transition-colors duration-200">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+            Volver al portfolio
+        </a>
+    </nav>
+
     <!-- Hero -->
     <header class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
         <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920')] bg-cover bg-center"></div>
@@ -48,12 +56,16 @@
 
     <!-- Menú -->
     <section id="menu" class="py-16 md:py-24 px-6">
-        <div class="max-w-4xl mx-auto">
+        <div class="max-w-5xl mx-auto">
             <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">Nuestra Carta</p>
             <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12">Menú</h2>
 
             <!-- Antipasti -->
-            <div class="mb-16">
+            <div class="mb-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+            <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1540189549336-e7e74372e012?w=600" alt="Antipasti italianos" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
+            </div>
+            <div class="flex-1 order-1 md:order-2">
                 <div class="flex items-center gap-3 mb-6">
                     <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
                     <h3 class="font-serif text-2xl md:text-3xl text-ink">Antipasti</h3>
@@ -82,9 +94,14 @@
                     </div>
                 </div>
             </div>
+            </div>
 
             <!-- Pasta -->
-            <div class="mb-16">
+            <div class="mb-20 flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center">
+            <div class="w-full md:w-2/5 flex-shrink-0">
+                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600" alt="Pasta fresca italiana" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
+            </div>
+            <div class="flex-1">
                 <div class="flex items-center gap-3 mb-6">
                     <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
                     <h3 class="font-serif text-2xl md:text-3xl text-ink">Pasta</h3>
@@ -113,9 +130,14 @@
                     </div>
                 </div>
             </div>
+            </div>
 
             <!-- Pizza -->
-            <div>
+            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
+            <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
+                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza artesanal italiana" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
+            </div>
+            <div class="flex-1 order-1 md:order-2">
                 <div class="flex items-center gap-3 mb-6">
                     <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
                     <h3 class="font-serif text-2xl md:text-3xl text-ink">Pizza</h3>
@@ -144,15 +166,20 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
     </section>
 
     <!-- Sobre nosotros -->
-    <section class="py-16 md:py-24 px-6 bg-white">
-        <div class="max-w-3xl mx-auto text-center">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">La historia</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-10">Sobre nosotros</h2>
-            <div class="space-y-6 text-ink/85 leading-relaxed">
+    <section class="py-16 md:py-24 px-6 bg-white overflow-hidden">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif text-center">La historia</p>
+            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12 text-center">Sobre nosotros</h2>
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] md:aspect-auto md:min-h-[320px]">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" alt="Cocina tradicional italiana" class="w-full h-full object-cover" loading="lazy">
+                </div>
+                <div class="space-y-6 text-ink/85 leading-relaxed text-center md:text-left">
                 <p class="font-serif text-lg italic">
                     En Bella Vita, la cocina italiana no es una moda: es una herencia que atraviesa generaciones.
                 </p>
@@ -162,6 +189,7 @@
                 <p>
                     Nuestro espacio refleja esa esencia: cálido, acogedor y pensado para que cada comida sea una experiencia. Porque en Bella Vita no solo comes; viajas a Italia en cada bocado.
                 </p>
+                </div>
             </div>
         </div>
     </section>
@@ -171,24 +199,24 @@
         <div class="max-w-5xl mx-auto">
             <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">Momentos</p>
             <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12">Galería</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-3">
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600" alt="Interior del restaurante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Interior elegante del restaurante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza italiana" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800" alt="Pizza Margherita artesanal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600" alt="Pasta fresca" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800" alt="Espaguetis frescos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=600" alt="Mesa elegante" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Mesa para dos con velas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600" alt="Plato gourmet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800" alt="Plato gourmet con presentación elegante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
-                <div class="aspect-square bg-ink/10 rounded-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=600" alt="Vino y comida" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+                <div class="aspect-square rounded-xl overflow-hidden group">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800" alt="Vino y quesos italianos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
                 </div>
             </div>
         </div>
