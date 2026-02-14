@@ -7,20 +7,20 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
                         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
-                        sans: ['DM Sans', 'system-ui', 'sans-serif'],
+                        display: ['Libre Baskerville', 'Georgia', 'serif'],
                     },
                     colors: {
-                        cream: '#faf8f5',
-                        ink: '#1a1a1a',
-                        gold: '#D4AF37',
-                        goldlight: '#e8c96a',
+                        cream: '#faf6f0',
+                        ink: '#2c2420',
+                        gold: '#B8860B',
+                        goldlight: '#D4AF37',
                     }
                 }
             }
@@ -30,252 +30,141 @@
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-cream text-ink font-sans antialiased">
+<body class="bg-cream text-ink font-serif antialiased">
 
-    <!-- Navegación -->
-    <nav class="fixed top-4 left-6 z-40">
-        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink/80 backdrop-blur-sm text-white/95 hover:bg-ink hover:text-white text-sm font-medium transition-colors duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            Volver al portfolio
-        </a>
+    <!-- Nav bar superior elegante -->
+    <nav class="fixed top-0 left-0 right-0 z-40 py-5 px-8 flex justify-between items-center bg-cream/95 backdrop-blur border-b border-gold/20">
+        <a href="../index.html#portfolio" class="text-ink/80 hover:text-gold text-sm tracking-widest uppercase">← Portfolio</a>
+        <div class="flex gap-10">
+            <a href="#menu" class="text-ink/70 hover:text-gold text-sm tracking-widest">Menú</a>
+            <a href="#galeria" class="text-ink/70 hover:text-gold text-sm tracking-widest">Galería</a>
+            <a href="#contacto" class="text-ink/70 hover:text-gold text-sm tracking-widest">Contacto</a>
+        </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1920')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-ink/60"></div>
-        <div class="relative z-10 px-6 max-w-4xl mx-auto">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-4 font-serif">Restaurante Italiano</p>
-            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-semibold text-white tracking-tight mb-4">Bella Vita</h1>
-            <p class="text-white/90 text-lg sm:text-xl mb-10 font-serif italic max-w-xl mx-auto">Donde la tradición italiana cobra vida en cada bocado</p>
-            <a href="#contacto" class="inline-block bg-gold text-ink px-10 py-4 rounded-sm font-medium hover:bg-goldlight transition-colors duration-200 tracking-wider">
+    <!-- Hero split: imagen izq, texto der -->
+    <header class="min-h-screen flex flex-col md:flex-row">
+        <div class="md:w-1/2 min-h-[50vh] md:min-h-screen bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200')] bg-cover bg-center"></div>
+        <div class="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-20 bg-cream">
+            <p class="text-gold text-xs tracking-[0.4em] uppercase mb-4">Restaurante Italiano</p>
+            <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-ink mb-6 leading-tight">Bella Vita</h1>
+            <p class="text-ink/70 text-lg mb-10 italic max-w-md">Donde la tradición italiana cobra vida en cada bocado.</p>
+            <a href="#contacto" class="inline-block w-fit border-2 border-gold text-gold px-8 py-3 font-medium hover:bg-gold hover:text-cream transition-colors duration-300 tracking-wider text-sm">
                 Reservar Mesa
             </a>
         </div>
     </header>
 
-    <!-- Menú -->
-    <section id="menu" class="py-16 md:py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">Nuestra Carta</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12">Menú</h2>
-
-            <!-- Antipasti -->
-            <div class="mb-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-            <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
-                <img src="https://images.unsplash.com/photo-1540189549336-e7e74372e012?w=600" alt="Antipasti italianos" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
-            </div>
-            <div class="flex-1 order-1 md:order-2">
-                <div class="flex items-center gap-3 mb-6">
-                    <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-                    <h3 class="font-serif text-2xl md:text-3xl text-ink">Antipasti</h3>
-                </div>
-                <div class="space-y-4 border-l-2 border-gold/30 pl-6">
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Bruschetta al pomodoro</p>
-                            <p class="text-ink/70 text-sm">Pan rústico con tomate fresco, albahaca y aceite de oliva</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">12€</span>
+    <!-- Menú: 3 cards en grid -->
+    <section id="menu" class="py-24 px-6 md:px-12 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-gold text-xs tracking-[0.4em] uppercase mb-2">Nuestra Carta</p>
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-16">Menú</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
+                    <div class="aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e7e74372e012?w=500" alt="Antipasti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Carpaccio di manzo</p>
-                            <p class="text-ink/70 text-sm">Ternera finamente laminada, rúcula y parmesano</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">18€</span>
-                    </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Burrata con prosciutto</p>
-                            <p class="text-ink/70 text-sm">Burrata cremosa, jamón de Parma y reducción de balsámico</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">16€</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Pasta -->
-            <div class="mb-20 flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center">
-            <div class="w-full md:w-2/5 flex-shrink-0">
-                <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=600" alt="Pasta fresca italiana" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
-            </div>
-            <div class="flex-1">
-                <div class="flex items-center gap-3 mb-6">
-                    <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
-                    <h3 class="font-serif text-2xl md:text-3xl text-ink">Pasta</h3>
-                </div>
-                <div class="space-y-4 border-l-2 border-gold/30 pl-6">
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Spaghetti alla carbonara</p>
-                            <p class="text-ink/70 text-sm">Guanciale, huevo, pecorino y pimienta negra</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">15€</span>
-                    </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Tagliatelle al ragù di carne</p>
-                            <p class="text-ink/70 text-sm">Pasta fresca con ragú clásico boloñés</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">17€</span>
-                    </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Risotto ai funghi porcini</p>
-                            <p class="text-ink/70 text-sm">Arroz cremoso con boletus y parmesano</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">19€</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-
-            <!-- Pizza -->
-            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-            <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
-                <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600" alt="Pizza artesanal italiana" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg">
-            </div>
-            <div class="flex-1 order-1 md:order-2">
-                <div class="flex items-center gap-3 mb-6">
-                    <svg class="w-6 h-6 text-gold flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"/></svg>
-                    <h3 class="font-serif text-2xl md:text-3xl text-ink">Pizza</h3>
-                </div>
-                <div class="space-y-4 border-l-2 border-gold/30 pl-6">
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Margherita</p>
-                            <p class="text-ink/70 text-sm">Salsa de tomate, mozzarella di bufala y albahaca</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">13€</span>
-                    </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Quattro formaggi</p>
-                            <p class="text-ink/70 text-sm">Mozzarella, gorgonzola, parmesano y fontina</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">16€</span>
-                    </div>
-                    <div class="flex justify-between items-baseline gap-4">
-                        <div>
-                            <p class="font-medium text-ink">Tartufo bianco</p>
-                            <p class="text-ink/70 text-sm">Crema de trufa, mozzarella y trufa negra laminada</p>
-                        </div>
-                        <span class="text-gold font-serif text-lg whitespace-nowrap">24€</span>
-                    </div>
-                </div>
-            </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre nosotros -->
-    <section class="py-16 md:py-24 px-6 bg-white overflow-hidden">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif text-center">La historia</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12 text-center">Sobre nosotros</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] md:aspect-auto md:min-h-[320px]">
-                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800" alt="Cocina tradicional italiana" class="w-full h-full object-cover" loading="lazy">
-                </div>
-                <div class="space-y-6 text-ink/85 leading-relaxed text-center md:text-left">
-                <p class="font-serif text-lg italic">
-                    En Bella Vita, la cocina italiana no es una moda: es una herencia que atraviesa generaciones.
-                </p>
-                <p>
-                    Cada plato que servimos cuenta una historia de tradición, de recetas transmitidas de abuelas a nietos en pequeños pueblos de la Toscana, de Nápoles y de Sicilia. Seleccionamos los mejores ingredientes, trabajamos la masa con tiempo y dedicación, y cocinamos con el mismo respeto con el que se hace en las cocinas familiares italianas.
-                </p>
-                <p>
-                    Nuestro espacio refleja esa esencia: cálido, acogedor y pensado para que cada comida sea una experiencia. Porque en Bella Vita no solo comes; viajas a Italia en cada bocado.
-                </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galería -->
-    <section class="py-16 md:py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">Momentos</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12">Galería</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Interior elegante del restaurante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800" alt="Pizza Margherita artesanal" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=800" alt="Espaguetis frescos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800" alt="Mesa para dos con velas" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=800" alt="Plato gourmet con presentación elegante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=800" alt="Vino y quesos italianos" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-16 md:py-24 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-gold text-sm uppercase tracking-[0.3em] mb-2 font-serif">Encuéntranos</p>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-12">Contacto</h2>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Mapa placeholder -->
-                <div class="aspect-[4/3] md:aspect-auto md:min-h-[300px] bg-stone-200 rounded-lg overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.496841855386!2d-3.7037903234107837!3d40.41677597233918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1a3f54c9%3A0xa0d3e86f5b1a4e6f!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses"
-                        width="100%"
-                        height="100%"
-                        style="border:0; min-height: 300px;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Ubicación Bella Vita"
-                    ></iframe>
-                </div>
-
-                <!-- Horarios e info -->
-                <div>
-                    <div class="mb-8">
-                        <h3 class="font-serif text-xl text-ink mb-4">Horario</h3>
-                        <ul class="space-y-2 text-ink/80">
-                            <li class="flex justify-between"><span>Lunes</span><span>Cerrado</span></li>
-                            <li class="flex justify-between"><span>Martes - Jueves</span><span>13:00 - 23:30</span></li>
-                            <li class="flex justify-between"><span>Viernes - Sábado</span><span>13:00 - 00:30</span></li>
-                            <li class="flex justify-between"><span>Domingo</span><span>13:00 - 23:00</span></li>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl mb-4 text-ink">Antipasti</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span>Bruschetta al pomodoro</span><span class="text-gold">12€</span></li>
+                            <li class="flex justify-between"><span>Carpaccio di manzo</span><span class="text-gold">18€</span></li>
+                            <li class="flex justify-between"><span>Burrata con prosciutto</span><span class="text-gold">16€</span></li>
                         </ul>
                     </div>
-                    <div>
-                        <h3 class="font-serif text-xl text-ink mb-4">Dirección</h3>
-                        <p class="text-ink/80">Calle Elegante, 123<br>28001 Madrid</p>
+                </article>
+                <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
+                    <div class="aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500" alt="Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     </div>
-                    <a href="#contacto" class="inline-block mt-6 bg-gold text-ink px-8 py-3 rounded-sm font-medium hover:bg-goldlight transition-colors duration-200">
-                        Reservar Mesa
-                    </a>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl mb-4 text-ink">Pasta</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span>Spaghetti alla carbonara</span><span class="text-gold">15€</span></li>
+                            <li class="flex justify-between"><span>Tagliatelle al ragù</span><span class="text-gold">17€</span></li>
+                            <li class="flex justify-between"><span>Risotto ai funghi</span><span class="text-gold">19€</span></li>
+                        </ul>
+                    </div>
+                </article>
+                <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
+                    <div class="aspect-[3/4] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-display text-xl mb-4 text-ink">Pizza</h3>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between"><span>Margherita</span><span class="text-gold">13€</span></li>
+                            <li class="flex justify-between"><span>Quattro formaggi</span><span class="text-gold">16€</span></li>
+                            <li class="flex justify-between"><span>Tartufo bianco</span><span class="text-gold">24€</span></li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería estilo masonry -->
+    <section id="galeria" class="py-24 px-6 md:px-12 bg-cream">
+        <div class="max-w-6xl mx-auto">
+            <p class="text-gold text-xs tracking-[0.4em] uppercase mb-2">Momentos</p>
+            <h2 class="font-display text-4xl md:text-5xl font-bold mb-12">Galería</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                <div class="md:col-span-2 md:row-span-2 aspect-square md:aspect-auto md:min-h-[400px] overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Pizza" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400" alt="Pasta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Mesa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400" alt="Plato" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                </div>
+                <div class="aspect-square overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400" alt="Vino" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Botón flotante WhatsApp -->
-    <a
-        href="https://wa.me/34600000000?text=Hola,%20me%20gustaría%20reservar%20una%20mesa%20en%20Bella%20Vita"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition-all duration-200"
-        aria-label="Contactar por WhatsApp"
-    >
+    <!-- Sobre nosotros: imagen full con overlay -->
+    <section class="relative py-32 overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600" alt="Cocina" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <div class="absolute inset-0 bg-ink/75"></div>
+        <div class="relative z-10 max-w-2xl mx-auto px-8 text-center text-white">
+            <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Sobre nosotros</h2>
+            <p class="text-white/90 leading-relaxed mb-4 italic">En Bella Vita, la cocina italiana no es una moda: es una herencia que atraviesa generaciones.</p>
+            <p class="text-white/80 leading-relaxed">Cada plato cuenta una historia de tradición. Recetas transmitidas de abuelas a nietos. Ingredientes seleccionados, masa trabajada con tiempo. Porque en Bella Vita no solo comes; viajas a Italia en cada bocado.</p>
+        </div>
+    </section>
+
+    <!-- Contacto: mapa full, info abajo -->
+    <section id="contacto" class="bg-white">
+        <div class="aspect-[21/9] md:aspect-[3/1] w-full overflow-hidden">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.496841855386!2d-3.7037903234107837!3d40.41677597233918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1a3f54c9%3A0xa0d3e86f5b1a4e6f!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" title="Bella Vita"></iframe>
+        </div>
+        <div class="max-w-6xl mx-auto px-8 py-16 flex flex-col md:flex-row gap-12 md:gap-24 justify-between">
+            <div>
+                <h3 class="font-display text-lg text-gold mb-2">Horario</h3>
+                <p class="text-ink/80">Martes - Jueves: 13:00 - 23:30<br>Viernes - Sábado: 13:00 - 00:30<br>Domingo: 13:00 - 23:00</p>
+            </div>
+            <div>
+                <h3 class="font-display text-lg text-gold mb-2">Dirección</h3>
+                <p class="text-ink/80">Calle Elegante, 123 · 28001 Madrid</p>
+            </div>
+            <a href="https://wa.me/34600000000?text=Hola,%20reserva%20Bella%20Vita" target="_blank" rel="noopener" class="border-2 border-gold text-gold px-8 py-3 w-fit hover:bg-gold hover:text-cream transition-colors">
+                Reservar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <a href="https://wa.me/34600000000?text=Hola,%20reserva%20Bella%20Vita" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" aria-label="WhatsApp">
         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-
 </body>
 </html>

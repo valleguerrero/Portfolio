@@ -7,21 +7,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     fontFamily: {
-                        sans: ['DM Sans', 'Outfit', 'system-ui', 'sans-serif'],
-                        display: ['Outfit', 'system-ui', 'sans-serif'],
+                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
                     },
                     colors: {
-                        cream: '#f8fafc',
-                        ink: '#0f172a',
-                        slate: '#475569',
                         sky: '#0284c7',
-                        skylight: '#0ea5e9',
+                        skydeep: '#0369a1',
+                        ice: '#e0f2fe',
                     }
                 }
             }
@@ -29,251 +26,117 @@
     </script>
     <style>
         html { scroll-behavior: smooth; }
+        .gradient-hero { background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%); }
+        .gradient-card { background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%); }
     </style>
 </head>
-<body class="bg-cream text-ink font-sans antialiased">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Navegación -->
-    <nav class="fixed top-4 left-6 z-40">
-        <a href="../index.html#portfolio" class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-ink/80 backdrop-blur-sm text-white/95 hover:bg-ink hover:text-white text-sm font-medium transition-colors duration-200">
-            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
-            Volver al portfolio
-        </a>
+    <!-- Nav flotante minimalista -->
+    <nav class="fixed top-6 right-6 z-40">
+        <a href="../index.html#portfolio" class="px-5 py-2 rounded-full bg-white/90 backdrop-blur text-slate-600 hover:text-sky text-sm font-medium shadow-sm">← Portfolio</a>
     </nav>
 
-    <!-- Hero -->
-    <header class="relative min-h-screen flex flex-col justify-center items-center text-center overflow-hidden">
-        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=1920')] bg-cover bg-center"></div>
-        <div class="absolute inset-0 bg-ink/60"></div>
-        <div class="relative z-10 px-6 max-w-4xl mx-auto">
-            <p class="text-sky text-sm uppercase tracking-[0.3em] mb-4 font-display">Aire Acondicionado</p>
-            <h1 class="font-display text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-white tracking-tight mb-4">ClimaFresco</h1>
-            <p class="text-white/95 text-lg sm:text-xl mb-10 max-w-xl mx-auto">Venta, instalación y mantenimiento. Frescor y confort todo el año.</p>
-            <a href="#contacto" class="inline-block bg-sky text-white px-10 py-4 rounded-sm font-medium hover:bg-skylight transition-colors duration-200 tracking-wider">
+    <!-- Hero con gradiente -->
+    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-hero relative overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=1920')] bg-cover bg-center opacity-20"></div>
+        <div class="relative z-10">
+            <p class="text-white/90 text-sm font-medium tracking-wider uppercase mb-3">Aire Acondicionado</p>
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight mb-4">ClimaFresco</h1>
+            <p class="text-white/95 text-lg md:text-xl mb-10 max-w-md mx-auto">Venta, instalación y mantenimiento. Frescor y confort todo el año.</p>
+            <a href="#contacto" class="inline-block bg-white text-sky px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors shadow-lg">
                 Solicitar Presupuesto
             </a>
         </div>
     </header>
 
-    <!-- Servicios -->
-    <section id="servicios" class="py-16 md:py-24 px-6">
+    <!-- Servicios: icon cards en grid 3 columnas -->
+    <section id="servicios" class="py-24 px-6">
         <div class="max-w-5xl mx-auto">
-            <p class="text-sky text-sm uppercase tracking-[0.3em] mb-2 font-display">Lo que hacemos</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-12">Servicios</h2>
-
-            <!-- Instalación -->
-            <div class="mb-20 flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-                <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
-                    <img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=600" alt="Instalación aire acondicionado" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg" loading="lazy">
+            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Servicios</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-16">Qué hacemos</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-3">Instalación</h3>
+                    <ul class="text-slate-600 text-sm space-y-1">
+                        <li>Split inverter · Desde 450€</li>
+                        <li>Multi-split</li>
+                        <li>Canalizado y cassette</li>
+                    </ul>
                 </div>
-                <div class="flex-1 order-1 md:order-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <svg class="w-6 h-6 text-sky flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                        <h3 class="font-display text-2xl md:text-3xl text-ink font-bold">Instalación</h3>
+                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                     </div>
-                    <div class="space-y-4 border-l-2 border-sky/30 pl-6">
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Split inverter</p>
-                                <p class="text-slate/80 text-sm">Una o varias habitaciones, hasta 50 m²</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Desde 450€</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Multi-split</p>
-                                <p class="text-slate/80 text-sm">Varios splits con una sola unidad exterior</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Consultar</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Canalizado y cassette</p>
-                                <p class="text-slate/80 text-sm">Para falsos techos y grandes superficies</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Consultar</span>
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-3">Mantenimiento</h3>
+                    <ul class="text-slate-600 text-sm space-y-1">
+                        <li>Revisión anual · Desde 65€</li>
+                        <li>Reparación · Desde 45€</li>
+                        <li>Carga de gas</li>
+                    </ul>
                 </div>
-            </div>
-
-            <!-- Mantenimiento y reparación -->
-            <div class="mb-20 flex flex-col md:flex-row-reverse gap-10 md:gap-16 items-center">
-                <div class="w-full md:w-2/5 flex-shrink-0">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600" alt="Mantenimiento de climatización" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg" loading="lazy">
-                </div>
-                <div class="flex-1">
-                    <div class="flex items-center gap-3 mb-6">
-                        <svg class="w-6 h-6 text-sky flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                        <h3 class="font-display text-2xl md:text-3xl text-ink font-bold">Mantenimiento y Reparación</h3>
+                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
+                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
+                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
                     </div>
-                    <div class="space-y-4 border-l-2 border-sky/30 pl-6">
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Revisión anual</p>
-                                <p class="text-slate/80 text-sm">Limpieza, carga de gas y comprobaciones</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Desde 65€</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Reparación de averías</p>
-                                <p class="text-slate/80 text-sm">Diagnóstico y solución el mismo día</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Desde 45€</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Carga de gas refrigerante</p>
-                                <p class="text-slate/80 text-sm">R-32 y R-410A, con certificado</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">Consultar</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Venta de equipos -->
-            <div class="flex flex-col md:flex-row gap-10 md:gap-16 items-center">
-                <div class="w-full md:w-2/5 flex-shrink-0 order-2 md:order-1">
-                    <img src="https://images.unsplash.com/photo-1621905251918-48416c2e0ac5?w=600" alt="Equipos de aire acondicionado" class="rounded-xl w-full aspect-[4/3] object-cover shadow-lg" loading="lazy">
-                </div>
-                <div class="flex-1 order-1 md:order-2">
-                    <div class="flex items-center gap-3 mb-6">
-                        <svg class="w-6 h-6 text-sky flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                        <h3 class="font-display text-2xl md:text-3xl text-ink font-bold">Venta de Equipos</h3>
-                    </div>
-                    <div class="space-y-4 border-l-2 border-sky/30 pl-6">
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Marcas premium</p>
-                                <p class="text-slate/80 text-sm">Daikin, Mitsubishi, LG, Samsung, Fujitsu</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">—</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Inverter A+++</p>
-                                <p class="text-slate/80 text-sm">Eficiencia máxima y ahorro energético</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">—</span>
-                        </div>
-                        <div class="flex justify-between items-baseline gap-4">
-                            <div>
-                                <p class="font-semibold text-ink">Bomba de calor</p>
-                                <p class="text-slate/80 text-sm">Calefacción y refrigeración en un solo equipo</p>
-                            </div>
-                            <span class="text-sky font-display text-lg whitespace-nowrap">—</span>
-                        </div>
-                    </div>
+                    <h3 class="font-bold text-xl text-slate-800 mb-3">Venta de Equipos</h3>
+                    <ul class="text-slate-600 text-sm space-y-1">
+                        <li>Daikin, Mitsubishi, LG</li>
+                        <li>Inverter A+++</li>
+                        <li>Bomba de calor</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Sobre nosotros -->
-    <section class="py-16 md:py-24 px-6 bg-white overflow-hidden">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sky text-sm uppercase tracking-[0.3em] mb-2 font-display text-center">Nuestra empresa</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-12 text-center">Sobre nosotros</h2>
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] md:aspect-auto md:min-h-[320px]">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800" alt="Equipo ClimaFresco" class="w-full h-full object-cover" loading="lazy">
-                </div>
-                <div class="space-y-6 text-slate leading-relaxed text-center md:text-left">
-                    <p class="font-display font-semibold text-ink text-lg">
-                        Más de 15 años instalando y reparando aire acondicionado en hogares y negocios.
-                    </p>
-                    <p>
-                        En ClimaFresco somos instaladores autorizados de las principales marcas. Trabajamos con equipos de alta eficiencia que reducen el consumo y garantizan un clima agradable en verano e invierno.
-                    </p>
-                    <p>
-                        Ofrecemos presupuesto sin compromiso, instalación en 24-48 horas y garantía en todos nuestros trabajos. Tu comodidad es nuestra prioridad.
-                    </p>
-                </div>
-            </div>
+    <!-- Sobre nosotros: sección con borde curvo -->
+    <section class="py-24 px-6 bg-white relative">
+        <div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-50 to-white"></div>
+        <div class="max-w-3xl mx-auto text-center relative">
+            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Sobre nosotros</h2>
+            <p class="text-slate-600 leading-relaxed">Más de 15 años instalando aire acondicionado. Instaladores autorizados, equipos de alta eficiencia. Presupuesto sin compromiso, instalación en 24-48h.</p>
         </div>
     </section>
 
-    <!-- Galería -->
-    <section class="py-16 md:py-24 px-6">
+    <!-- Contacto ANTES de galería (orden distinto) -->
+    <section id="contacto" class="py-24 px-6 bg-gradient-to-b from-white to-ice/50">
         <div class="max-w-5xl mx-auto">
-            <p class="text-sky text-sm uppercase tracking-[0.3em] mb-2 font-display">Trabajos realizados</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-12">Galería</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=800" alt="Split inverter instalado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800" alt="Unidad exterior" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1621905251918-48416c2e0ac5?w=800" alt="Equipos de climatización" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1558618047-f4b9066dd259?w=800" alt="Control de temperatura" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=800" alt="Instalación profesional" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-                <div class="aspect-square rounded-xl overflow-hidden group">
-                    <img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=800" alt="Interior climatizado" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="py-16 md:py-24 px-6 bg-white">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sky text-sm uppercase tracking-[0.3em] mb-2 font-display">Ubicación</p>
-            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-12">Contacto</h2>
-
+            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Ubicación</p>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12">Contacto</h2>
             <div class="grid md:grid-cols-2 gap-10">
-                <div class="aspect-[4/3] md:aspect-auto md:min-h-[300px] bg-slate/5 rounded-xl overflow-hidden">
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.496841855386!2d-3.7037903234107837!3d40.41677597233918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1a3f54c9%3A0xa0d3e86f5b1a4e6f!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses!4v1234567890123!5m2!1ses!2ses"
-                        width="100%"
-                        height="100%"
-                        style="border:0; min-height: 300px;"
-                        allowfullscreen=""
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                        title="Ubicación ClimaFresco"
-                    ></iframe>
+                <div class="rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-auto md:min-h-[280px]">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.496841855386!2d-3.7037903234107837!3d40.41677597233918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1a3f54c9%3A0xa0d3e86f5b1a4e6f!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses" width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen="" loading="lazy" title="ClimaFresco"></iframe>
                 </div>
-
-                <div>
-                    <div class="mb-8">
-                        <h3 class="font-display text-xl text-ink mb-4">Horario</h3>
-                        <ul class="space-y-2 text-slate">
-                            <li class="flex justify-between"><span>Lunes - Viernes</span><span>8:00 - 19:00</span></li>
-                            <li class="flex justify-between"><span>Sábados</span><span>9:00 - 14:00</span></li>
-                            <li class="flex justify-between"><span>Domingos</span><span>Cerrado</span></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h3 class="font-display text-xl text-ink mb-4">Dirección</h3>
-                        <p class="text-slate">Carretera Nacional 301, km 12<br>28850 Torrejón de Ardoz, Madrid</p>
-                    </div>
-                    <a href="https://wa.me/34600000000?text=Hola,%20quisiera%20pedir%20presupuesto%20de%20aire%20acondicionado" class="inline-block mt-6 bg-sky text-white px-8 py-3 rounded-sm font-medium hover:bg-skylight transition-colors duration-200">
-                        Pedir presupuesto por WhatsApp
-                    </a>
+                <div class="flex flex-col justify-center">
+                    <p class="text-slate-600 mb-4">Carretera Nacional 301, km 12<br>28850 Torrejón de Ardoz</p>
+                    <p class="text-slate-600 mb-6">Lun-Vie: 8:00-19:00 · Sáb: 9:00-14:00</p>
+                    <a href="https://wa.me/34600000000?text=Hola,%20presupuesto%20aire%20acondicionado" target="_blank" rel="noopener" class="inline-block bg-sky text-white px-8 py-3 rounded-full font-bold hover:bg-skydeep transition-colors w-fit">Pedir presupuesto</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Botón flotante WhatsApp -->
-    <a
-        href="https://wa.me/34600000000?text=Hola,%20quisiera%20información%20sobre%20instalación%20o%20reparación%20de%20aire%20acondicionado"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:bg-[#20bd5a] hover:scale-110 transition-all duration-200"
-        aria-label="Contactar por WhatsApp"
-    >
+    <!-- Galería al final -->
+    <section class="py-24 px-6">
+        <div class="max-w-5xl mx-auto">
+            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Trabajos</p>
+            <h2 class="text-3xl font-bold text-slate-800 mb-12">Galería</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=600" alt="AC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
+                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600" alt="AC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
+                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1621905251918-48416c2e0ac5?w=600" alt="AC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
+                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1558618047-f4b9066dd259?w=600" alt="AC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
+                <div class="aspect-square rounded-2xl overflow-hidden col-span-2"><img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=800" alt="AC" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
+            </div>
+        </div>
+    </section>
+
+    <a href="https://wa.me/34600000000?text=Hola,%20presupuesto%20aire%20acondicionado" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" aria-label="WhatsApp">
         <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
-
 </body>
 </html>
