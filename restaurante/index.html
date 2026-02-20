@@ -44,7 +44,9 @@
 
     <!-- Hero split: imagen izq, texto der -->
     <header class="min-h-screen flex flex-col md:flex-row">
-        <div class="md:w-1/2 min-h-[50vh] md:min-h-screen bg-[url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200')] bg-cover bg-center"></div>
+        <div class="md:w-1/2 min-h-[50vh] md:min-h-screen overflow-hidden relative">
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&q=80" alt="Restaurante Bella Vita" class="absolute inset-0 w-full h-full object-cover" fetchpriority="high">
+        </div>
         <div class="md:w-1/2 flex flex-col justify-center px-8 md:px-16 py-20 bg-cream">
             <p class="text-gold text-xs tracking-[0.4em] uppercase mb-4">Restaurante Italiano</p>
             <h1 class="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-ink mb-6 leading-tight">Bella Vita</h1>
@@ -63,7 +65,7 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
                     <div class="aspect-[3/4] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1540189549336-e7e74372e012?w=500" alt="Antipasti" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e7e74372e012?w=500&q=80" alt="Antipasti" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl mb-4 text-ink">Antipasti</h3>
@@ -76,7 +78,7 @@
                 </article>
                 <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
                     <div class="aspect-[3/4] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500" alt="Pasta" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=500&q=80" alt="Pasta" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl mb-4 text-ink">Pasta</h3>
@@ -89,7 +91,7 @@
                 </article>
                 <article class="border border-ink/10 overflow-hidden group hover:border-gold/40 transition-colors">
                     <div class="aspect-[3/4] overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500" alt="Pizza" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=500&q=80" alt="Pizza" referrerpolicy="no-referrer" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="font-display text-xl mb-4 text-ink">Pizza</h3>
@@ -111,22 +113,22 @@
             <h2 class="font-display text-4xl md:text-5xl font-bold mb-12">Galería</h2>
             <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
                 <div class="md:col-span-2 md:row-span-2 aspect-square md:aspect-auto md:min-h-[400px] overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800" alt="Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80" alt="Interior" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400" alt="Pizza" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&q=80" alt="Pizza" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400" alt="Pasta" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&q=80" alt="Pasta" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400" alt="Mesa" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&q=80" alt="Mesa" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400" alt="Plato" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=400&q=80" alt="Plato" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
                 <div class="aspect-square overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400" alt="Vino" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?w=400&q=80" alt="Vino" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
                 </div>
             </div>
         </div>
@@ -134,7 +136,7 @@
 
     <!-- Sobre nosotros: imagen full con overlay -->
     <section class="relative py-32 overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600" alt="Cocina" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1600&q=80" alt="Cocina" referrerpolicy="no-referrer" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
         <div class="absolute inset-0 bg-ink/75"></div>
         <div class="relative z-10 max-w-2xl mx-auto px-8 text-center text-white">
             <h2 class="font-display text-3xl md:text-4xl font-bold mb-6">Sobre nosotros</h2>
