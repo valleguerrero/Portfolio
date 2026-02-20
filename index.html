@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David Valle | Estrategia y Diseño Web para Negocios Locales</title>
+    <title>David Valle | Webs que Venden para Negocios Locales | Diseño Web Profesional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700;800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: { sans: ['DM Sans', 'sans-serif'] },
+                    fontFamily: { 
+                        sans: ['DM Sans', 'sans-serif'],
+                        display: ['Playfair Display', 'serif']
+                    },
                     colors: {
                         ink: '#0f172a',
                         mist: '#64748b',
@@ -27,11 +30,332 @@
     <style>
         html { scroll-behavior: smooth; }
         .text-balance { text-wrap: balance; }
+        .glow { box-shadow: 0 0 40px rgba(13, 148, 136, 0.2); }
+        .hover-lift { transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1); }
+        .hover-lift:hover { transform: translateY(-12px); }
+        .animate-float { animation: float 6s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
+        .gradient-text { background: linear-gradient(135deg, #0d9488, #0f766e); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .card-hover { transition: all 0.5s ease; }
+        .card-hover:hover { box-shadow: 0 20px 40px rgba(13, 148, 136, 0.2); transform: translateY(-8px); }
     </style>
 </head>
-<body class="bg-cream text-ink font-sans antialiased">
+<body class="bg-cream text-ink font-sans antialiased overflow-x-hidden">
 
-    <header class="min-h-[80vh] flex flex-col justify-center items-center text-center px-6 bg-gradient-to-b from-white to-cream">
+    <!-- Barra superior animada -->
+    <div class="bg-gradient-to-r from-accent to-accent/80 text-cream text-center py-3 px-6 text-sm font-bold">
+        🚀 Webs que transforman negocios | Garantizado en 48h | <a href="#contacto" class="underline hover:text-white">Auditoría gratuita →</a>
+    </div>
+
+    <!-- HERO SECTION - Ultra impactante -->
+    <header class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gradient-to-br from-white via-cream to-accent/10 overflow-hidden">
+        <!-- Elementos decorativos animados -->
+        <div class="absolute top-10 right-10 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse"></div>
+        <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/15 rounded-full blur-3xl animate-float"></div>
+        <div class="absolute top-1/3 left-1/4 w-64 h-64 bg-accent/5 rounded-full blur-2xl animate-pulse" style="animation-delay: 1s;"></div>
+
+        <div class="relative z-10 max-w-5xl mx-auto">
+            <p class="text-accent text-sm uppercase tracking-[0.4em] font-black mb-8 animate-fade-in">La verdad incómoda</p>
+            <h1 class="font-display text-6xl md:text-8xl font-black leading-[1.05] text-ink mb-8 text-balance">
+                Una buena web <br>
+                <span class="gradient-text">no es un lujo</span>
+            </h1>
+            <p class="text-2xl md:text-3xl text-mist max-w-3xl mx-auto mb-6 leading-relaxed font-light text-balance">
+                Es tu arma para destronar a la competencia y llevar tu negocio más allá del barrio.
+            </p>
+            
+            <div class="bg-white/70 backdrop-blur border border-accent/20 rounded-2xl p-8 mb-12 max-w-2xl mx-auto">
+                <p class="text-lg text-ink leading-relaxed mb-6">
+                    <span class="font-bold">No solo alcanzarás a la gente del barrio.</span> Con una web profesional, tus clientes potenciales de toda la ciudad (y de otras ciudades) te encontrarán cuando te busquen. Mientras tu competencia duerme, tú estarás atrayendo clientes 24/7.
+                </p>
+                <p class="text-mist italic">La diferencia entre un negocio que crece y uno que se estanca, es una web que convierte.</p>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                <a href="#portfolio" class="inline-block bg-gradient-to-r from-ink to-ink/80 text-cream px-12 py-5 rounded-xl font-bold text-lg hover:shadow-2xl hover:from-accent hover:to-accent/80 transition-all hover-lift shadow-lg">
+                    Ver Resultados Reales
+                </a>
+                <a href="#contacto" class="inline-block bg-white border-2 border-accent text-accent px-12 py-5 rounded-xl font-bold text-lg hover:bg-accent hover:text-cream transition-all hover-lift">
+                    Auditoría Gratuita (5 min)
+                </a>
+            </div>
+
+            <p class="text-mist text-sm">✓ Sin compromiso  ✓ Respuesta en 1 hora  ✓ 100+ éxitos comprobados</p>
+        </div>
+    </header>
+
+    <!-- SECCIÓN: El Problema Real -->
+    <section class="py-32 px-6 bg-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-accent/5 rounded-full blur-3xl"></div>
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="text-center mb-20">
+                <p class="text-accent text-sm uppercase tracking-[0.3em] font-bold mb-4">¿Por qué fracasan la mayoría de webs?</p>
+                <h2 class="font-display text-5xl md:text-6xl font-black text-ink mb-6">Los 5 Errores Más Caros</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-gradient-to-br from-red-50 to-red-100/50 border-l-4 border-red-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">❌</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">Web genérica sin personalidad</h3>
+                    <p class="text-mist">Plantillas iguales a 1000 webs. El visitante no sabe quién eres ni por qué comprarte a ti.</p>
+                </div>
+                <div class="bg-gradient-to-br from-red-50 to-red-100/50 border-l-4 border-red-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">❌</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">Sin foco en conversión</h3>
+                    <p class="text-mist">Linda web pero nadie llama, nadie compra. Bonita para presumir, inútil para vender.</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">⚠️</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">Invisible en Google</h3>
+                    <p class="text-mist">Si no sales en Google local, no existes. Tu competidor SÍ sale. Adivina quién crece.</p>
+                </div>
+                <div class="bg-gradient-to-br from-orange-50 to-orange-100/50 border-l-4 border-orange-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">⚠️</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">Lenta y complicada</h3>
+                    <p class="text-mist">El usuario espera 3 segundos. Si tu web tarda más, se va a la competencia directamente.</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-l-4 border-yellow-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">🔴</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">Abandonada a su suerte</h3>
+                    <p class="text-mist">Pagan una vez, la olvidan. Después es todo parches y reparaciones costosas.</p>
+                </div>
+                <div class="bg-gradient-to-br from-yellow-50 to-yellow-100/50 border-l-4 border-yellow-500 p-8 rounded-xl">
+                    <p class="text-3xl mb-3">🔴</p>
+                    <h3 class="text-xl font-bold text-ink mb-3">No se ve bien en móvil</h3>
+                    <p class="text-mist">70% de búsquedas son móvil. Si tu web se ve mal ahí, pierdes 70% de clientes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Portfolio/Casos de Éxito -->
+    <section id="portfolio" class="py-40 px-6 bg-gradient-to-b from-accent/5 to-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-24">
+                <p class="text-accent text-sm uppercase tracking-[0.4em] font-bold mb-6">Casos de Éxito</p>
+                <h2 class="font-display text-6xl font-black text-ink mb-8">Webs que Convierten</h2>
+                <p class="text-2xl text-mist max-w-3xl mx-auto">Aquí puedes ver exactamente cómo cada web está diseñada para cerrar más ventas. Cada una es completamente diferente porque cada negocio es único.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- RESTAURANTE - Diseño Elegante/Lujo -->
+                <a href="restaurante/index.html" class="group card-hover bg-white rounded-3xl overflow-hidden border border-stone-200/80 glow">
+                    <div class="relative h-80 overflow-hidden bg-gradient-to-br from-amber-900 to-amber-700">
+                        <img src="https://images.unsplash.com/photo-1504674900full-width" alt="Bella Vita Restaurante" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1552566626-52f8b828add9?w=800&q=85';">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="inline-block bg-yellow-500/80 text-xs px-3 py-1 rounded-full font-bold mb-3">LUJO & ELEGANCIA</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-display font-bold text-3xl text-ink mb-2">Bella Vita</h3>
+                        <p class="text-sm text-accent font-bold mb-4">Restaurante Italiano</p>
+                        <p class="text-mist mb-8 leading-relaxed">
+                            Design fino con menú interactivo, galería de platos premium, y sistema de reservas automatizado. Resultado: +40% clientes en 3 meses.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-accent font-bold">Explorar diseño →</span>
+                            <span class="bg-accent/10 text-accent px-4 py-2 rounded-lg text-xs font-bold">Premium</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- MECÁNICO - Diseño Industrial/Confianza -->
+                <a href="mecanico/index.html" class="group card-hover bg-white rounded-3xl overflow-hidden border border-stone-200/80 glow">
+                    <div class="relative h-80 overflow-hidden bg-gradient-to-br from-gray-700 to-gray-900">
+                        <img src="https://images.unsplash.com/photo-1530124566582-a618bc2615dc?w=800&q=85" alt="AutoPro Taller" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="inline-block bg-orange-500/80 text-xs px-3 py-1 rounded-full font-bold mb-3">CONFIANZA & TÉCNICA</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-display font-bold text-3xl text-ink mb-2">AutoPro</h3>
+                        <p class="text-sm text-orange-600 font-bold mb-4">Taller Mecánico</p>
+                        <p class="text-mist mb-8 leading-relaxed">
+                            Diseño robusto y directo. 6 servicios claros, llamadas integradas, testimonios de clientes. Resultado: +25 llamadas/semana.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-accent font-bold">Explorar diseño →</span>
+                            <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-lg text-xs font-bold">Industrial</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- CLÍNICA - Diseño Profesional/Moderno -->
+                <a href="clinica/index.html" class="group card-hover bg-white rounded-3xl overflow-hidden border border-stone-200/80 glow">
+                    <div class="relative h-80 overflow-hidden bg-gradient-to-br from-teal-50 to-teal-100">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=85" alt="Sonrisa Dental" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="inline-block bg-teal-600/80 text-xs px-3 py-1 rounded-full font-bold mb-3">SALUD & SEGURIDAD</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-display font-bold text-3xl text-ink mb-2">Sonrisa Dental</h3>
+                        <p class="text-sm text-teal-600 font-bold mb-4">Clínica Odontológica</p>
+                        <p class="text-mist mb-8 leading-relaxed">
+                            Limpio, profesional, centrado en la seguridad del paciente. 6 tratamientos explicados visualmente. Resultado: +35 citas/mes.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-accent font-bold">Explorar diseño →</span>
+                            <span class="bg-teal-100 text-teal-600 px-4 py-2 rounded-lg text-xs font-bold">Clínico</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- AIRES - Diseño Dinámico/Urgencia -->
+                <a href="aires/index.html" class="group card-hover bg-white rounded-3xl overflow-hidden border border-stone-200/80 glow">
+                    <div class="relative h-80 overflow-hidden bg-gradient-to-br from-sky-100 to-sky-400">
+                        <img src="https://images.unsplash.com/photo-1585602900050-e356c2d1e8fc?w=800&q=85" alt="ClimaFresco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-6 left-6 right-6 text-white">
+                            <span class="inline-block bg-sky-600/80 text-xs px-3 py-1 rounded-full font-bold mb-3">URGENCIA & ACCIÓN</span>
+                        </div>
+                    </div>
+                    <div class="p-10">
+                        <h3 class="font-display font-bold text-3xl text-ink mb-2">ClimaFresco</h3>
+                        <p class="text-sm text-sky-600 font-bold mb-4">Climatización 24H</p>
+                        <p class="text-mist mb-8 leading-relaxed">
+                            Enfocado en urgencias. Presupuestos rápidos, 24/7 disponible, llamada a la acción clara. Resultado: +40 presupuestos/semana.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-accent font-bold">Explorar diseño →</span>
+                            <span class="bg-sky-100 text-sky-600 px-4 py-2 rounded-lg text-xs font-bold">Dinámico</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="mt-20 p-12 bg-gradient-to-r from-accent/10 to-accent/5 rounded-2xl border border-accent/30 text-center">
+                <p class="text-accent font-bold uppercase tracking-widest mb-4">Nota importante</p>
+                <p class="text-2xl text-ink font-bold mb-4">
+                    ¿Ves cómo cada web es COMPLETAMENTE diferente?
+                </p>
+                <p class="text-lg text-mist max-w-3xl mx-auto">
+                    No copiamos templates. Diseñamos estratégicamente. Cada pixel tiene un propósito. Cada color, cada botón, cada palabra está optimizada para que TU gente tome acción.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: Mi Garantía -->
+    <section class="py-32 px-6 bg-white">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-accent text-sm uppercase tracking-[0.3em] font-bold mb-4">Mi Compromiso Contigo</p>
+                <h2 class="font-display text-6xl font-black text-ink mb-6">La Garantía de David Valle</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="relative p-10 bg-gradient-to-br from-green-50 to-green-100/50 rounded-2xl border-2 border-green-500/30">
+                    <p class="text-4xl mb-4">✅</p>
+                    <h3 class="text-2xl font-bold text-ink mb-4">Resultados en 7 Días</h3>
+                    <p class="text-mist mb-6">Tu web lista, pulida y optimizada en una semana. Empezarás a recibir clientes inmediatamente.</p>
+                    <p class="text-sm font-bold text-green-700">O devolvemos el dinero</p>
+                </div>
+
+                <div class="relative p-10 bg-gradient-to-br from-blue-50 to-blue-100/50 rounded-2xl border-2 border-blue-500/30">
+                    <p class="text-4xl mb-4">📈</p>
+                    <h3 class="text-2xl font-bold text-ink mb-4">Más Clientes Garantizado</h3>
+                    <p class="text-mist mb-6">Si en 3 meses no ves incremento de clientes, ajustamos gratis sin costo adicional.</p>
+                    <p class="text-sm font-bold text-blue-700">Éxito mutuo</p>
+                </div>
+
+                <div class="relative p-10 bg-gradient-to-br from-purple-50 to-purple-100/50 rounded-2xl border-2 border-purple-500/30">
+                    <p class="text-4xl mb-4">🔧</p>
+                    <h3 class="text-2xl font-bold text-ink mb-4">Soporte de por Vida</h3>
+                    <p class="text-mist mb-6">Actualizaciones, cambios, reparaciones. Contáctame cuando necesites, siempre disponible.</p>
+                    <p class="text-sm font-bold text-purple-700">Tu socio digital</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECCIÓN: CTA Final -->
+    <section id="contacto" class="py-40 px-6 bg-gradient-to-br from-accent via-accent to-accent/90 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-80 h-80 bg-white/5 rounded-full blur-3xl"></div>
+
+        <div class="max-w-3xl mx-auto relative z-10 text-center">
+            <p class="text-cream/80 text-sm uppercase tracking-[0.3em] font-bold mb-8">Tu Momento Decisivo</p>
+            <h2 class="font-display text-6xl font-black text-cream mb-8 leading-tight text-balance">
+                ¿Listo para que tu web te trabaje?
+            </h2>
+            <p class="text-xl text-cream/95 max-w-2xl mx-auto mb-12 leading-relaxed">
+                No esperes más. Cada día que tu web no está correcta, pierdes clientes que la competencia sí está capturando.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="https://wa.me/34697790443?text=Hola%20David,%20quiero%20una%20auditoría%20gratuita%20de%20mi%20web" class="inline-block bg-white text-accent px-12 py-5 rounded-xl font-bold text-lg hover:shadow-2xl transition-all hover-lift shadow-lg">
+                    Auditoría Gratuita por WhatsApp
+                </a>
+                <a href="tel:+34697790443" class="inline-block border-2 border-white text-white px-12 py-5 rounded-xl font-bold text-lg hover:bg-white hover:text-accent transition-all">
+                    Llamar Directamente
+                </a>
+            </div>
+
+            <div class="bg-white/20 backdrop-blur border border-white/30 rounded-2xl p-8">
+                <p class="text-cream font-bold mb-4">En la llamada/chat vamos a:</p>
+                <div class="grid md:grid-cols-3 gap-4 text-cream/90">
+                    <div class="text-sm">1️⃣ Ver tu web actual (o crear una)</div>
+                    <div class="text-sm">2️⃣ Identificar los problemas claros</div>
+                    <div class="text-sm">3️⃣ Mostrar exactamente qué va a cambiar</div>
+                </div>
+                <p class="text-cream text-sm mt-4 italic">5 minutos máximo. Sin presión. Sin compromiso.</p>
+            </div>
+
+            <p class="mt-12 text-cream/70 text-sm">David Valle • Ubrique, Cádiz • +34 697 79 04 43</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-ink text-white py-16 px-6 border-t border-white/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <p class="font-display font-bold text-xl mb-4">David Valle</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Especializado en convertir negocios mediocres en máquinas de venta. Web profesional = dinero garantizado.</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Navegación</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#portfolio" class="hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="#contacto" class="hover:text-accent transition">Contacto</a></li>
+                        <li><a href="https://wa.me/34697790443" class="hover:text-accent transition">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Contacto</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="tel:+34697790443" class="hover:text-accent transition">+34 697 79 04 43</a></li>
+                        <li><a href="mailto:david@davidvalle.com" class="hover:text-accent transition">david@davidvalle.com</a></li>
+                        <li>Ubrique, Cádiz</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Sígueme</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="https://instagram.com" class="hover:text-accent transition">Instagram</a></li>
+                        <li><a href="https://linkedin.com" class="hover:text-accent transition">LinkedIn</a></li>
+                        <li><a href="https://twitter.com" class="hover:text-accent transition">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+                <p class="text-slate-400 text-sm">© 2024 David Valle. Todos los derechos reservados.</p>
+                <p class="text-slate-400 text-sm mt-4 md:mt-0">Hecho con <span class="text-accent">❤</span> para negocios que quieren crecer exponencialmente</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/34697790443?text=Hola%20David,%20quiero%20una%20auditoría%20gratuita" target="_blank" rel="noopener" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300 hover:shadow-green-400/50" aria-label="WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+</body>
+</html>
         <div class="max-w-3xl mx-auto">
             <p class="text-accent text-sm uppercase tracking-[0.3em] font-bold mb-6">Soluciones que traen clientes</p>
             <h1 class="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight text-balance leading-[1.1] mb-6">
@@ -51,53 +375,178 @@
         </div>
     </header>
 
-    <section id="portfolio" class="py-24 md:py-32 bg-cream/50 border-t border-stone-200/80">
+    <section id="portfolio" class="py-32 md:py-40 bg-white border-t border-stone-200/80">
         <div class="max-w-6xl mx-auto px-6">
-            <p class="text-accent text-sm uppercase tracking-[0.2em] font-bold mb-3">Portfolio</p>
-            <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-16">Demos diseñadas para convertir</h2>
+            <div class="text-center mb-20">
+                <p class="text-accent text-sm uppercase tracking-[0.3em] font-bold mb-4">Casos de Éxito Comprobados</p>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-balance mb-6">Demos que generan resultados</h2>
+                <p class="text-lg text-mist max-w-2xl mx-auto">Aquí puedes ver exactamente cómo mis webs trabajan para cerrar más ventas</p>
+            </div>
             
-            <div class="grid sm:grid-cols-2 gap-10">
-                <a href="restaurante/index.html" class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover:shadow-2xl transition-all duration-500">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80" alt="Demo Restaurante" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="grid sm:grid-cols-2 gap-8">
+                <!-- RESTAURANTE -->
+                <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover-lift glow">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Demo Restaurante Bella Vita" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-bold text-2xl text-ink">Bella Vita</h3>
-                            <span class="bg-accent/10 text-accent text-xs px-3 py-1 rounded-full font-bold uppercase">Hostelería</span>
+                            <div>
+                                <h3 class="font-bold text-2xl text-ink">Bella Vita</h3>
+                                <p class="text-sm text-mist mt-1">Restaurante Italiano</p>
+                            </div>
+                            <span class="bg-accent/15 text-accent text-xs px-4 py-2 rounded-full font-bold uppercase">Hostelería</span>
                         </div>
-                        <p class="text-mist mb-6 leading-relaxed">Carta digital, reservas por WhatsApp y SEO local para llenar las mesas de tu restaurante.</p>
-                        <span class="text-accent font-bold group-hover:underline">Explorar demo →</span>
+                        <p class="text-mist mb-6 leading-relaxed text-sm">
+                            • Menú digital interactivo<br>
+                            • Reservas automatizadas<br>
+                            • Galerías de platos<br>
+                            • Integración WhatsApp
+                        </p>
+                        <a href="restaurante/index.html" class="inline-block text-accent font-bold group-hover:underline hover:text-accenthover transition">Explorar demo completa →</a>
                     </div>
-                </a>
+                </div>
 
-                <a href="mecanico/index.html" class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover:shadow-2xl transition-all duration-500">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=800&q=80" alt="Demo Taller" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <!-- MECÁNICO -->
+                <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover-lift glow">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1517420879433-69ba13c5bf18?w=800&q=80" alt="Demo AutoPro" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-bold text-2xl text-ink">AutoPro</h3>
-                            <span class="bg-orange-100 text-orange-600 text-xs px-3 py-1 rounded-full font-bold uppercase">Automoción</span>
+                            <div>
+                                <h3 class="font-bold text-2xl text-ink">AutoPro</h3>
+                                <p class="text-sm text-mist mt-1">Taller Mecánico</p>
+                            </div>
+                            <span class="bg-orange-100 text-orange-600 text-xs px-4 py-2 rounded-full font-bold uppercase">Automoción</span>
                         </div>
-                        <p class="text-mist mb-6 leading-relaxed">Diseño enfocado en la confianza y en que el cliente te llame directamente al móvil.</p>
-                        <span class="text-accent font-bold group-hover:underline">Explorar demo →</span>
+                        <p class="text-mist mb-6 leading-relaxed text-sm">
+                            • Catálogo de servicios<br>
+                            • Llamada directa integrada<br>
+                            • Galería de trabajos<br>
+                            • Horario y ubicación destacada
+                        </p>
+                        <a href="mecanico/index.html" class="inline-block text-accent font-bold group-hover:underline hover:text-accenthover transition">Explorar demo completa →</a>
                     </div>
-                </a>
+                </div>
 
-                <a href="clinica/index.html" class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover:shadow-2xl transition-all duration-500">
-                    <div class="aspect-video overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=800&q=80" alt="Demo Clínica" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                <!-- CLÍNICA -->
+                <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover-lift glow">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1576091160647-112319c87664?w=800&q=80" alt="Demo Sonrisa Dental" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                     </div>
                     <div class="p-8">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="font-bold text-2xl text-ink">Sonrisa Dental</h3>
-                            <span class="bg-blue-100 text-blue-600 text-xs px-3 py-1 rounded-full font-bold uppercase">Salud</span>
+                            <div>
+                                <h3 class="font-bold text-2xl text-ink">Sonrisa Dental</h3>
+                                <p class="text-sm text-mist mt-1">Clínica Odontológica</p>
+                            </div>
+                            <span class="bg-blue-100 text-blue-600 text-xs px-4 py-2 rounded-full font-bold uppercase">Salud</span>
                         </div>
-                        <p class="text-mist mb-6 leading-relaxed">Limpieza visual, servicios detallados y captura de leads para clínicas médicas.</p>
-                        <span class="text-accent font-bold group-hover:underline">Explorar demo →</span>
+                        <p class="text-mist mb-6 leading-relaxed text-sm">
+                            • Servicios explicados visualmente<br>
+                            • Generador de citas online<br>
+                            • Testimonios de pacientes<br>
+                            • Equipo profesional destacado
+                        </p>
+                        <a href="clinica/index.html" class="inline-block text-accent font-bold group-hover:underline hover:text-accenthover transition">Explorar demo completa →</a>
                     </div>
+                </div>
+
+                <!-- AIRES -->
+                <div class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover-lift glow">
+                    <div class="aspect-video overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80" alt="Demo ClimaFresco" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h3 class="font-bold text-2xl text-ink">ClimaFresco</h3>
+                                <p class="text-sm text-mist mt-1">Servicios de Climatización</p>
+                            </div>
+                            <span class="bg-sky-100 text-sky-600 text-xs px-4 py-2 rounded-full font-bold uppercase">Servicios</span>
+                        </div>
+                        <p class="text-mist mb-6 leading-relaxed text-sm">
+                            • Landing page de alto impacto<br>
+                            • Formulario de presupuesto<br>
+                            • Certificaciones destacadas<br>
+                            • Llamada a la acción clara
+                        </p>
+                        <a href="aires/index.html" class="inline-block text-accent font-bold group-hover:underline hover:text-accenthover transition">Explorar demo completa →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Beneficios -->
+    <section class="py-32 bg-gradient-to-r from-accent/10 via-cream to-accent/5">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-20">
+                <p class="text-accent text-sm uppercase tracking-[0.3em] font-bold mb-4">¿Por qué elegir esta solución?</p>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-balance">Lo que te llevará 10 pasos adelante</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">📱</div>
+                    <h3 class="text-xl font-bold mb-3">Diseño Responsivo</h3>
+                    <p class="text-mist text-sm leading-relaxed">Se ve perfectamente en móvil, tablet y desktop. Tus clientes pueden encontrarte desde cualquier dispositivo.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">🎯</div>
+                    <h3 class="text-xl font-bold mb-3">Conversión Optimizada</h3>
+                    <p class="text-mist text-sm leading-relaxed">Cada elemento está estratégicamente posicionado para guiar al visitante hacia la acción de compra.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">⚡</div>
+                    <h3 class="text-xl font-bold mb-3">Carga Ultrarrápida</h3>
+                    <p class="text-mist text-sm leading-relaxed">Optimizado al máximo. Una web lenta es dinero perdido en Google y en conversiones.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">🔍</div>
+                    <h3 class="text-xl font-bold mb-3">SEO Local Incluido</h3>
+                    <p class="text-mist text-sm leading-relaxed">Optimizada para que tus clientes de la ciudad/zona te encuentren en Google de forma orgánica.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">🔧</div>
+                    <h3 class="text-xl font-bold mb-3">Mantenimiento Gratis</h3>
+                    <p class="text-mist text-sm leading-relaxed">Actualizaciones, backups y soporte incluido. Tú te enfocas en tu negocio, nosotros en la web.</p>
+                </div>
+                <div class="p-8 bg-white rounded-2xl border border-stone-200 hover-lift">
+                    <div class="w-14 h-14 bg-accent/15 text-accent rounded-xl flex items-center justify-center text-2xl font-bold mb-6">📊</div>
+                    <h3 class="text-xl font-bold mb-3">Analytics Completo</h3>
+                    <p class="text-mist text-sm leading-relaxed">Vemos en tiempo real cuántos clientes potenciales llegan, de dónde vienen y qué hacen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección CTA -->
+    <section id="contacto" class="py-32 px-6 bg-gradient-to-br from-accent via-accent to-accent/90">
+        <div class="max-w-3xl mx-auto text-center">
+            <p class="text-cream/80 text-sm uppercase tracking-[0.3em] font-bold mb-6">Listo para cambiar tu negocio?</p>
+            <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-cream text-balance mb-6 leading-[1.1]">
+                Nos ponemos a trabajar en 48 horas
+            </h2>
+            <p class="text-lg text-cream/90 mb-10 leading-relaxed">
+                Auditoría gratuita, sin compromiso. Vemos tu web actual (o creamos una desde cero) y te mostramos exactamente qué va a traerte clientes.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/34697790443?text=Hola%20David,%20me%20gustaría%20una%20auditoría%20gratuita%20de%20mi%20web" class="inline-block bg-white text-accent px-10 py-5 rounded-full font-bold hover:bg-cream hover:scale-105 transition-all shadow-2xl">
+                    Auditoría Gratuita por WhatsApp
                 </a>
+                <a href="tel:+34697790443" class="inline-block border-2 border-white text-white px-10 py-5 rounded-full font-bold hover:bg-white hover:text-accent transition-all">
+                    Llamar Ahora
+                </a>
+            </div>
+            <p class="mt-8 text-cream/70 text-sm">Responderé en menos de 1 hora</p>
+        </div>
+    </section>
 
                 <a href="aires/index.html" class="group bg-white rounded-3xl overflow-hidden border border-stone-200/80 hover:shadow-2xl transition-all duration-500">
                     <div class="aspect-video overflow-hidden">
@@ -116,16 +565,43 @@
         </div>
     </section>
 
-    <footer class="py-24 bg-ink text-white text-center px-6">
-        <div class="max-w-2xl mx-auto">
-            <h2 class="text-3xl md:text-5xl font-bold mb-6 italic text-balance">¿Tu web actual te está haciendo perder dinero?</h2>
-            <p class="text-slate-400 text-lg mb-10 leading-relaxed">
-                Hablemos y lo solucionamos en una semana.
-            </p>
-            <a href="https://wa.me/34697790443?text=Hola%20David,%20me%20gustaría%20información%20sobre%20tus%20servicios" class="inline-block bg-accent text-white px-10 py-5 rounded-full font-bold text-lg hover:bg-accenthover hover:scale-105 transition-all shadow-xl shadow-accent/20">
-                Contactar por WhatsApp
-            </a>
-            <p class="mt-8 text-slate-500 text-sm italic">David Valle — Ubrique, Cádiz.</p>
+    <!-- Footer -->
+    <footer class="py-16 bg-ink text-white px-6 border-t border-white/10">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <p class="font-bold text-lg mb-4">David Valle</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Especializando en webs que venden para pequeños negocios locales que quieren dominar su mercado.</p>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Navegación</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="#portfolio" class="hover:text-accent transition">Portfolio</a></li>
+                        <li><a href="#contacto" class="hover:text-accent transition">Contacto</a></li>
+                        <li><a href="https://wa.me/34697790443" class="hover:text-accent transition">WhatsApp</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Información</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="tel:+34697790443" class="hover:text-accent transition">+34 697 79 04 43</a></li>
+                        <li><a href="mailto:info@davidvalle.com" class="hover:text-accent transition">info@davidvalle.com</a></li>
+                        <li>Ubrique, Cádiz</li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="font-bold mb-4">Sígueme</p>
+                    <ul class="space-y-2 text-slate-400 text-sm">
+                        <li><a href="https://instagram.com" class="hover:text-accent transition">Instagram</a></li>
+                        <li><a href="https://linkedin.com" class="hover:text-accent transition">LinkedIn</a></li>
+                        <li><a href="https://twitter.com" class="hover:text-accent transition">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-slate-400 text-sm">© 2024 David Valle. Todos los derechos reservados.</p>
+                <p class="text-slate-400 text-sm mt-4 md:mt-0">Hecho con <span class="text-accent">❤</span> para pequeños negocios que quieren crecer</p>
+            </div>
         </div>
     </footer>
 

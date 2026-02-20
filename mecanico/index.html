@@ -3,51 +3,312 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AutoPro | Mecánica Profesional</title>
+    <title>AutoPro | Taller Mecánico Profesional</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { dark: '#111827', orange: '#f97316' }
+                    colors: { dark: '#111827', orange: '#f97316', slate: '#64748b' }
                 }
             }
         }
     </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .hover-lift { transition: all 0.3s ease; }
+        .hover-lift:hover { transform: translateY(-8px); }
+    </style>
 </head>
 <body class="bg-dark text-white antialiased">
-    <nav class="p-6 flex justify-between items-center border-b border-white/10">
-        <a href="../index.html" class="text-gray-400 hover:text-orange">← Volver</a>
-        <div class="flex gap-4">
-            <a href="tel:34600000000" class="bg-orange text-white px-5 py-2 rounded font-bold uppercase text-sm">Llamar Ahora</a>
+
+    <!-- Banner anuncio -->
+    <div class="bg-orange text-white text-center py-3 px-6 text-sm font-bold">
+        ⚙️ Revisión PRE-ITV desde 49€ | <a href="#contacto" class="underline hover:text-slate-100">Pedir cita →</a>
+    </div>
+
+    <!-- Navbar fija -->
+    <nav class="fixed top-8 left-0 right-0 z-40 max-w-6xl mx-auto px-6 flex justify-between items-center">
+        <a href="../index.html#portfolio" class="text-gray-400 hover:text-orange transition font-bold">← Portfolio</a>
+        <div class="hidden md:flex gap-8 bg-dark/80 backdrop-blur px-8 py-3 rounded-full border border-orange/20">
+            <a href="#servicios" class="text-gray-300 hover:text-orange text-sm transition font-semibold">Servicios</a>
+            <a href="#proceso" class="text-gray-300 hover:text-orange text-sm transition font-semibold">Proceso</a>
+            <a href="#contacto" class="text-gray-300 hover:text-orange text-sm transition font-semibold">Contacto</a>
         </div>
     </nav>
 
-    <header class="h-[80vh] flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1200" class="absolute inset-0 w-full h-full object-cover opacity-30 shadow-inner">
-        <div class="relative z-10">
-            <h1 class="text-6xl font-black italic mb-4">AUTOPRO</h1>
-            <p class="text-xl text-orange font-bold tracking-widest uppercase mb-8">Taller mecánico de confianza</p>
-            <div class="flex gap-4 justify-center">
-                <a href="#servicios" class="border-2 border-white px-8 py-3 font-bold hover:bg-white hover:text-dark transition">Servicios</a>
-                <a href="https://wa.me/34600000000" class="bg-orange px-8 py-3 font-bold hover:bg-orange/80 transition text-white">Pedir Cita</a>
+    <!-- Hero section -->
+    <header class="h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=1600&q=80" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-dark/90 via-dark/70 to-dark/50"></div>
+        
+        <div class="relative z-10 max-w-3xl">
+            <p class="text-orange text-sm uppercase tracking-[0.3em] font-bold mb-6">Taller de confianza desde 2005</p>
+            <h1 class="text-6xl md:text-7xl font-black italic mb-6 leading-tight">AUTOPRO</h1>
+            <p class="text-2xl text-orange font-bold tracking-widest uppercase mb-4">Mecánica Profesional</p>
+            <p class="text-xl text-gray-300 max-w-2xl mx-auto mb-10 leading-relaxed">
+                Somos el taller que tu coche merece. Diagnóstico honesto, reparaciones de calidad, y presupuestos sin sorpresas.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:+34600000000" class="inline-block bg-orange text-dark px-10 py-4 rounded-lg font-bold text-lg hover:bg-yellow-400 transition hover-lift shadow-lg shadow-orange/30">
+                    Llamar Ahora
+                </a>
+                <a href="#servicios" class="inline-block border-2 border-orange text-orange px-10 py-4 rounded-lg font-bold text-lg hover:bg-orange/20 transition">
+                    Ver Servicios
+                </a>
             </div>
         </div>
     </header>
 
-    <section id="servicios" class="py-24 max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12">
-        <div class="border-l-4 border-orange p-6 bg-white/5">
-            <h3 class="text-2xl font-bold mb-2">Revisión Pre-ITV</h3>
-            <p class="text-gray-400">Analizamos los 20 puntos clave para que pases la inspección a la primera.</p>
-        </div>
-        <div class="border-l-4 border-orange p-6 bg-white/5">
-            <h3 class="text-2xl font-bold mb-2">Mecánica Rápida</h3>
-            <p class="text-gray-400">Cambio de aceite, filtros y frenos en el mismo día.</p>
+    <!-- Stats section -->
+    <section class="py-20 bg-gray-900 px-6">
+        <div class="max-w-6xl mx-auto grid md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <p class="text-4xl font-bold text-orange mb-2">+2500</p>
+                <p class="text-gray-400 font-semibold">Clientes satisfechos</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl font-bold text-orange mb-2">19 años</p>
+                <p class="text-gray-400 font-semibold">De experiencia</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl font-bold text-orange mb-2">24h</p>
+                <p class="text-gray-400 font-semibold">Atención técnica</p>
+            </div>
+            <div class="text-center">
+                <p class="text-4xl font-bold text-orange mb-2">⭐⭐⭐⭐⭐</p>
+                <p class="text-gray-400 font-semibold">4.9 reseñas</p>
+            </div>
         </div>
     </section>
 
-    <footer class="bg-black py-12 text-center text-gray-500 text-sm">
-        <p>Polígono Industrial Norte, Nave 12 | Lun-Vie 8:00 - 19:00</p>
+    <!-- Servicios -->
+    <section id="servicios" class="py-32 px-6 bg-dark">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-orange text-sm uppercase tracking-[0.3em] font-bold mb-4">Nuestras Especialidades</p>
+                <h2 class="text-5xl md:text-6xl font-black mb-6 leading-tight">Servicios Profesionales</h2>
+                <p class="text-lg text-gray-400 max-w-2xl mx-auto">Desde diagnóstico hasta reparación completa del motor, trabajamos con los estándares más altos del sector.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-12">
+                <!-- Servicio 1 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        🔧
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Revisión PRE-ITV</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Análisis completo de los 20 puntos clave. Te mostramos exactamente qué necesita tu coche para pasar la ITV a la primera.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 49€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        ⚡
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Mantenimiento Básico</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Cambio de aceite, filtros de aire, filtro de polen. Mantén tu motor en perfecto estado para prolongar su vida.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 35€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        🛑
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Sistema de Frenos</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Inspección, cambio de pastillas, discos, líquido de frenos. La seguridad de tu familia es nuestra prioridad.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 79€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        🌪️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Suspensión y Dirección</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Amortiguadores, muelles, dirección. Garantizamos un manejo suave y seguro en cualquier tipo de vía.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 99€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        🔋
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Electricidad del Coche</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Batería, alternador, motor de arranque. Diagnóstico completo con escáner de última generación.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 59€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="bg-gray-900 border border-orange/20 p-8 rounded-2xl hover-lift group">
+                    <div class="w-14 h-14 bg-orange/20 text-orange rounded-xl flex items-center justify-center text-2xl font-bold mb-6 group-hover:bg-orange group-hover:text-dark transition">
+                        🌡️
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Aire Acondicionado</h3>
+                    <p class="text-gray-400 mb-6 leading-relaxed">Recarga de gas, limpieza, revisión de compresor. Mantén la comodidad en tus viajes.</p>
+                    <div class="flex items-center justify-between">
+                        <span class="text-orange font-bold text-2xl">Desde 45€</span>
+                        <a href="#contacto" class="bg-orange/20 text-orange px-6 py-2 rounded-lg font-bold hover:bg-orange hover:text-dark transition">Pedir cita</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proceso de reparación -->
+    <section id="proceso" class="py-32 bg-gray-900 px-6">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-orange text-sm uppercase tracking-[0.3em] font-bold mb-4">Nuestro Método</p>
+                <h2 class="text-5xl md:text-6xl font-black mb-6">Cómo Trabajamos</h2>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-6 relative">
+                <div class="bg-dark border border-orange/30 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-orange text-dark rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-3">Diagnóstico</h3>
+                    <p class="text-gray-400 text-sm">Usamos escáner profesional para detectar el problema exacto sin conjeturas.</p>
+                </div>
+                <div class="bg-dark border border-orange/30 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-orange text-dark rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-3">Presupuesto Clear</h3>
+                    <p class="text-gray-400 text-sm">Te mostramos el presupuesto detallado. Sin sorpresas. Trabajamos solo si lo autorizas.</p>
+                </div>
+                <div class="bg-dark border border-orange/30 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-orange text-dark rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-3">Reparación</h3>
+                    <p class="text-gray-400 text-sm">Nuestros mecánicos certificados usan piezas de calidad original o equivalente.</p>
+                </div>
+                <div class="bg-dark border border-orange/30 p-8 rounded-2xl text-center">
+                    <div class="w-16 h-16 bg-orange text-dark rounded-full flex items-center justify-center text-3xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-bold mb-3">Garantía 100%</h3>
+                    <p class="text-gray-400 text-sm">6 meses de garantía en todas las reparaciones realizadas. Tu tranquilidad es nuestro compromiso.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Por qué elegirnos -->
+    <section class="py-32 px-6 bg-dark">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-20">
+                <p class="text-orange text-sm uppercase tracking-[0.3em] font-bold mb-4">Ventajas</p>
+                <h2 class="text-5xl font-black mb-6">¿Por qué somos tu mejor opción?</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="flex gap-4 p-6 bg-gray-900 rounded-2xl border border-orange/20 hover-lift">
+                    <div class="text-3xl flex-shrink-0">✅</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Mecánicos Certificados</h3>
+                        <p class="text-gray-400">Todos nuestros profesionales están capacitados y con experiencia verificada.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 bg-gray-900 rounded-2xl border border-orange/20 hover-lift">
+                    <div class="text-3xl flex-shrink-0">💰</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Precios Justos</h3>
+                        <p class="text-gray-400">Sin margen de beneficio excesivo. Competimos por calidad, no por el precio más bajo.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 bg-gray-900 rounded-2xl border border-orange/20 hover-lift">
+                    <div class="text-3xl flex-shrink-0">⚙️</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Equipamiento Moderno</h3>
+                        <p class="text-gray-400">Escáner de última generación, herramientas profesionales, equipos de diagnóstico avanzados.</p>
+                    </div>
+                </div>
+                <div class="flex gap-4 p-6 bg-gray-900 rounded-2xl border border-orange/20 hover-lift">
+                    <div class="text-3xl flex-shrink-0">📍</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Ubicación Accesible</h3>
+                        <p class="text-gray-400">En el polígono industrial norte, con aparcamiento gratuito y fácil acceso desde cualquier parte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto CTA -->
+    <section id="contacto" class="py-32 bg-gradient-to-r from-orange to-orange/80 px-6 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="text-center mb-12">
+                <p class="text-dark/80 text-sm uppercase tracking-[0.3em] font-bold mb-4">Contacta ahora</p>
+                <h2 class="text-5xl md:text-6xl font-black text-dark mb-6">¿Listo para que cuidemos tu coche?</h2>
+                <p class="text-lg text-dark/90 max-w-2xl mx-auto">No esperes a que falle. Un mantenimiento preventivo es siempre más barato que una reparación de emergencia.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-12">
+                <a href="tel:+34600000000" class="group bg-dark text-orange border-2 border-dark p-8 rounded-2xl text-center hover:bg-white hover:border-white transition-all hover-lift">
+                    <p class="text-3xl mb-4">☎️</p>
+                    <p class="font-bold text-lg mb-1">Llamar</p>
+                    <p class="text-sm text-gray-300 group-hover:text-dark">+34 600 000 000</p>
+                </a>
+                <a href="https://wa.me/34600000000?text=Hola%20AutoPro,%20quiero%20pedir%20cita%20para%20una%20reparación" class="group bg-dark text-[#25D366] border-2 border-[#25D366] p-8 rounded-2xl text-center hover:bg-[#25D366] hover:text-white transition-all hover-lift">
+                    <p class="text-3xl mb-4">📱</p>
+                    <p class="font-bold text-lg mb-1">WhatsApp</p>
+                    <p class="text-sm text-gray-300 group-hover:text-white">Disponible 24/7</p>
+                </a>
+                <a href="mailto:info@autopro.es" class="group bg-dark text-yellow-400 border-2 border-yellow-400 p-8 rounded-2xl text-center hover:bg-yellow-400 hover:text-dark transition-all hover-lift">
+                    <p class="text-3xl mb-4">✉️</p>
+                    <p class="font-bold text-lg mb-1">Email</p>
+                    <p class="text-sm text-gray-300 group-hover:text-dark">info@autopro.es</p>
+                </a>
+            </div>
+
+            <div class="bg-dark border-2 border-dark rounded-2xl p-10 text-center">
+                <h3 class="text-2xl font-bold text-white mb-6">Información de Ubicación</h3>
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <div>
+                        <p class="font-bold text-orange text-sm uppercase tracking-widest mb-3">Dirección</p>
+                        <p class="text-gray-300 mb-4">Polígono Industrial Norte<br>Nave 12, Calle Principal<br>28001 Madrid</p>
+                        <a href="https://maps.google.com" class="text-orange font-bold hover:underline">Ver en Google Maps →</a>
+                    </div>
+                    <div>
+                        <p class="font-bold text-orange text-sm uppercase tracking-widest mb-3">Horario</p>
+                        <p class="text-gray-300">Lunes - Viernes: 08:00 - 19:00</p>
+                        <p class="text-gray-300">Sábado: 09:00 - 14:00</p>
+                        <p class="text-orange text-sm mt-4">Domingos: Cerrado</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/34600000000?text=Hola%20AutoPro,%20quiero%20pedir%20cita" target="_blank" rel="noopener" class="fixed bottom-8 right-8 z-50 w-16 h-16 bg-[#25D366] text-white rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300" aria-label="Contactar por WhatsApp">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-black text-gray-400 py-12 px-6 text-center border-t border-orange/20">
+        <div class="max-w-6xl mx-auto">
+            <p class="mb-2">AutoPro © 2024 - Tu taller de confianza</p>
+            <p class="text-sm"><a href="../index.html" class="hover:text-orange transition">← Volver al Portfolio</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>
     </footer>
 </body>
 </html>
