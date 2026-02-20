@@ -3,140 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClimaFresco | Aire Acondicionado e Instalación</title>
+    <title>ClimaFresco | Expertos en Climatización</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-                    },
-                    colors: {
-                        sky: '#0284c7',
-                        skydeep: '#0369a1',
-                        ice: '#e0f2fe',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        html { scroll-behavior: smooth; }
-        .gradient-hero { background: linear-gradient(135deg, #0284c7 0%, #0ea5e9 50%, #38bdf8 100%); }
-        .gradient-card { background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%); }
-    </style>
 </head>
-<body class="bg-slate-50 text-slate-800 font-sans antialiased">
-
-    <!-- Nav flotante minimalista -->
-    <nav class="fixed top-6 right-6 z-40">
-        <a href="../index.html#portfolio" class="px-5 py-2 rounded-full bg-white/90 backdrop-blur text-slate-600 hover:text-sky text-sm font-medium shadow-sm">← Portfolio</a>
+<body class="bg-slate-50 text-slate-800">
+    <div class="bg-sky-600 text-white py-2 text-center text-xs font-bold uppercase tracking-widest">
+        Instalación en menos de 48 horas
+    </div>
+    
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+        <a href="../index.html" class="text-sky-600 font-bold">← Volver al Portfolio</a>
+        <a href="https://wa.me/34600000000" class="bg-sky-600 text-white px-6 py-2 rounded-full font-bold shadow-lg shadow-sky-200">Presupuesto Gratis</a>
     </nav>
 
-    <!-- Hero con gradiente -->
-    <header class="min-h-screen flex flex-col justify-center items-center text-center px-6 gradient-hero relative overflow-hidden">
-        <img src="images/aire-remoto.png" alt="" class="absolute inset-0 w-full h-full object-cover opacity-25" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=1920&q=80';">
-        <div class="relative z-10">
-            <p class="text-white/90 text-sm font-medium tracking-wider uppercase mb-3">Aire Acondicionado</p>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold text-white tracking-tight mb-4">ClimaFresco</h1>
-            <p class="text-white/95 text-lg md:text-xl mb-10 max-w-md mx-auto">Venta, instalación y mantenimiento. Frescor y confort todo el año.</p>
-            <a href="#contacto" class="inline-block bg-white text-sky px-8 py-4 rounded-full font-bold hover:bg-slate-100 transition-colors shadow-lg">
-                Solicitar Presupuesto
-            </a>
+    <header class="py-32 px-6 text-center">
+        <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 mb-6">No pases más calor<br><span class="text-sky-500">en tu propia casa.</span></h1>
+        <p class="text-lg text-slate-500 max-w-xl mx-auto mb-10">Instaladores autorizados de las mejores marcas: Mitsubishi, Daikin y LG. Eficiencia energética A+++.</p>
+        <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-4xl mx-auto grid md:grid-cols-3 gap-8">
+            <div>
+                <p class="text-3xl font-bold text-sky-600 mb-1">15+</p>
+                <p class="text-xs font-bold uppercase text-slate-400">Años de experiencia</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-sky-600 mb-1">24h</p>
+                <p class="text-xs font-bold uppercase text-slate-400">Atención técnica</p>
+            </div>
+            <div>
+                <p class="text-3xl font-bold text-sky-600 mb-1">2 Años</p>
+                <p class="text-xs font-bold uppercase text-slate-400">Garantía total</p>
+            </div>
         </div>
     </header>
-
-    <!-- Servicios: icon cards en grid 3 columnas -->
-    <section id="servicios" class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Servicios</p>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-16">Qué hacemos</h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-800 mb-3">Instalación</h3>
-                    <ul class="text-slate-600 text-sm space-y-1">
-                        <li>Split inverter · Desde 450€</li>
-                        <li>Multi-split</li>
-                        <li>Canalizado y cassette</li>
-                    </ul>
-                </div>
-                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-800 mb-3">Mantenimiento</h3>
-                    <ul class="text-slate-600 text-sm space-y-1">
-                        <li>Revisión anual · Desde 65€</li>
-                        <li>Reparación · Desde 45€</li>
-                        <li>Carga de gas</li>
-                    </ul>
-                </div>
-                <div class="gradient-card rounded-3xl p-8 border border-sky/10 hover:border-sky/30 hover:shadow-lg transition-all">
-                    <div class="w-14 h-14 rounded-2xl bg-sky/20 flex items-center justify-center mb-5">
-                        <svg class="w-7 h-7 text-sky" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
-                    </div>
-                    <h3 class="font-bold text-xl text-slate-800 mb-3">Venta de Equipos</h3>
-                    <ul class="text-slate-600 text-sm space-y-1">
-                        <li>Daikin, Mitsubishi, LG</li>
-                        <li>Inverter A+++</li>
-                        <li>Bomba de calor</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sobre nosotros: sección con borde curvo -->
-    <section class="py-24 px-6 bg-white relative">
-        <div class="absolute top-0 left-0 right-0 h-24 bg-gradient-to-b from-slate-50 to-white"></div>
-        <div class="max-w-3xl mx-auto text-center relative">
-            <h2 class="text-2xl md:text-3xl font-bold text-slate-800 mb-6">Sobre nosotros</h2>
-            <p class="text-slate-600 leading-relaxed">Más de 15 años instalando aire acondicionado. Instaladores autorizados, equipos de alta eficiencia. Presupuesto sin compromiso, instalación en 24-48h.</p>
-        </div>
-    </section>
-
-    <!-- Contacto ANTES de galería (orden distinto) -->
-    <section id="contacto" class="py-24 px-6 bg-gradient-to-b from-white to-ice/50">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Ubicación</p>
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-800 mb-12">Contacto</h2>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="rounded-2xl overflow-hidden shadow-xl aspect-video md:aspect-auto md:min-h-[280px]">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3037.496841855386!2d-3.7037903234107837!3d40.41677597233918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd42287e1a3f54c9%3A0xa0d3e86f5b1a4e6f!2sPuerta%20del%20Sol%2C%20Madrid!5e0!3m2!1ses!2ses" width="100%" height="100%" style="border:0; min-height:280px;" allowfullscreen="" loading="lazy" title="ClimaFresco"></iframe>
-                </div>
-                <div class="flex flex-col justify-center">
-                    <p class="text-slate-600 mb-4">Carretera Nacional 301, km 12<br>28850 Torrejón de Ardoz</p>
-                    <p class="text-slate-600 mb-6">Lun-Vie: 8:00-19:00 · Sáb: 9:00-14:00</p>
-                    <a href="https://wa.me/34600000000?text=Hola,%20presupuesto%20aire%20acondicionado" target="_blank" rel="noopener" class="inline-block bg-sky text-white px-8 py-3 rounded-full font-bold hover:bg-skydeep transition-colors w-fit">Pedir presupuesto</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galería al final -->
-    <section class="py-24 px-6">
-        <div class="max-w-5xl mx-auto">
-            <p class="text-sky font-semibold text-sm tracking-wider uppercase mb-2">Trabajos</p>
-            <h2 class="text-3xl font-bold text-slate-800 mb-12">Galería</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="aspect-square rounded-2xl overflow-hidden"><img src="images/aire-remoto.png" alt="Aire acondicionado en uso en hogar" referrerpolicy="no-referrer" onerror="this.onerror=null; this.src='https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=600&q=80';" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
-                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80" alt="AC" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
-                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1621905251918-48416c2e0ac5?w=600&q=80" alt="AC" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
-                <div class="aspect-square rounded-2xl overflow-hidden"><img src="https://images.unsplash.com/photo-1558618047-f4b9066dd259?w=600&q=80" alt="AC" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
-                <div class="aspect-square rounded-2xl overflow-hidden col-span-2"><img src="https://images.unsplash.com/photo-1631545806609-2de3c901e6cf?w=800&q=80" alt="AC" referrerpolicy="no-referrer" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy"></div>
-            </div>
-        </div>
-    </section>
-
-    <a href="https://wa.me/34600000000?text=Hola,%20presupuesto%20aire%20acondicionado" target="_blank" rel="noopener" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform" aria-label="WhatsApp">
-        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-    </a>
 </body>
 </html>
